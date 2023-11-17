@@ -56,7 +56,7 @@ const TagItem = styled.li`
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
   text-transform: uppercase;
-  font-size: var(--size-200);
+  font-size: var(--size-400);
 
   & a {
     text-decoration: none;
