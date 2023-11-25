@@ -55,10 +55,12 @@ const PostWrapper = styled.div`
   margin-right: auto;
   max-width: 70ch;
   word-wrap: break-word;
+  font-size: 1.1rem;
 `;
 
 const PostTitle = styled.h1`
   font-size: var(--size-700);
+  font-family: "SUIT-Bold";
 `;
 
 const PostDate = styled.span`
@@ -83,6 +85,7 @@ const PostContent = styled.section`
   * + h2,
   * + h3 {
     margin-top: var(--size-900);
+    font-family: "SUIT-Bold";
   }
 
   h1 {
@@ -115,9 +118,10 @@ const PostContent = styled.section`
   }
 
   code {
-    font-family: "Source Sans Pro", monospace;
+    font-family: "Cascadia Code", monospace !important;
     overflow-x: auto;
     white-space: pre-wrap;
+    font-size: var(--size-400);
   }
 
   pre {

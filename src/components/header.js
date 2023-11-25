@@ -113,6 +113,7 @@ const HeaderTitle = styled.div`
     text-decoration: none;
     font-size: var(--size-400);
     color: inherit;
+    font-family: "GmarketSansMedium";
   }
 `;
 

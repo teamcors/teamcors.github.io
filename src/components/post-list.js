@@ -107,6 +107,7 @@ const PostListTitle = styled.h2`
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-transform: capitalize;
+  font-family: "SUIT-Bold";
   font-size: var(--size-600);
   font-weight: 700;
 
