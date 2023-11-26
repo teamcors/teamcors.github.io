@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Layout from '../components/layout';
-import PostList from '../components/post-list';
-import styled from 'styled-components';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
+import PostList from "../components/post-list";
+import styled from "styled-components";
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -10,7 +10,7 @@ const Blog = ({ data }) => {
   return (
     <Layout title="Blog">
       <HeaderWrapper>
-        <h1>Blog</h1>
+        <Title>Blog</Title>
 
         <Link
           css={`
@@ -40,6 +40,10 @@ const HeaderWrapper = styled.div`
   h1 {
     max-width: none;
   }
+`;
+
+const Title = styled.h1`
+  font-family: "SUIT-Bold";
 `;
 
 export const homePageQuery = graphql`

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Glass`,
+    title: `Team CORS`,
     author: {
       name: `Yinka Adedire`,
       summary: `Self-taught front-end web dev. JAMStack.`,
@@ -13,16 +13,12 @@ module.exports = {
     },
     socialLinks: [
       {
+        name: "blog",
+        url: "https://teamcors.github.io/",
+      },
+      {
         name: "github",
-        url: "https://github.com",
-      },
-      {
-        name: "twitter",
-        url: "https://twitter.com",
-      },
-      {
-        name: "instagram",
-        url: "https://instagram.com",
+        url: "https://github.com/teamcors",
       },
     ],
   },

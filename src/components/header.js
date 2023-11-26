@@ -7,18 +7,18 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const HEADER_NAV_ITEM = [
   {
-    label: "Blog",
-    url: "/blog",
-    isExternal: false,
-  },
-  {
     label: "About",
     url: "/about",
     isExternal: false,
   },
   {
-    label: "Contact",
-    url: "/contact",
+    label: "Post",
+    url: "/blog",
+    isExternal: false,
+  },
+  {
+    label: "Category",
+    url: "/tags",
     isExternal: false,
   },
 ];
@@ -85,7 +85,20 @@ const HeaderNavListItem = ({ children }) => {
 };
 
 const StyledHeader = styled.header`
-  padding-top: var(--size-300);
+  padding-top: var(--size-200);
+  padding-bottom: var(--size-200);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.2s ease-out;
+
+  body.light-mode & {
+    background-color: #ffe4e6;
+  }
+
+  body.dark-mode & {
+    background-color: #252526;
+  }
 `;
 
 const HeaderWrapper = styled(Container)`
@@ -100,6 +113,7 @@ const HeaderTitle = styled.div`
     text-decoration: none;
     font-size: var(--size-400);
     color: inherit;
+    font-family: "GmarketSansMedium";
   }
 `;
 

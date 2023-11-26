@@ -15,7 +15,7 @@ const Tags = ({ data }) => {
 
   return (
     <Layout title="All Tags">
-      <h1>All Tags</h1>
+      <Title>All Tags</Title>
 
       <TagList>
         {tags.map((tag) => (
@@ -43,6 +43,10 @@ export const pageQuery = graphql`
   }
 `;
 
+const Title = styled.h1`
+  font-family: "SUIT-Bold";
+`;
+
 const TagList = styled.ul`
   list-style: none;
   display: flex;
@@ -56,7 +60,7 @@ const TagItem = styled.li`
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
   text-transform: uppercase;
-  font-size: var(--size-200);
+  font-size: var(--size-400);
 
   & a {
     text-decoration: none;

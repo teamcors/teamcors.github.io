@@ -1,9 +1,9 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import PostList from '../components/post-list';
-import styled from 'styled-components';
-import StyledLink from '../components/styled-link';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import PostList from "../components/post-list";
+import styled from "styled-components";
+import StyledLink from "../components/styled-link";
 
 const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -48,21 +48,24 @@ const Intro = styled.div`
   margin-top: var(--size-800);
   margin-bottom: var(--size-900);
   text-align: center;
+  font-size: var(--size-700);
+
+  h1 {
+    font-family: "SUIT-ExtraBold";
+  }
 
   & p {
     text-transform: capitalize;
-    font-size: var(--size-400);
   }
 
   @media screen and (max-width: 700px) {
     & h1 {
-      font-size: var(--size-700);
     }
   }
 `;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title
