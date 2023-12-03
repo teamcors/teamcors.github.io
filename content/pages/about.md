@@ -1,12 +1,12 @@
 ---
-title: About Mee
+title: About Us
 template: about-template
-profile_image: ../../static/media/profile-image.jpg
+profile_image_light: ../../static/media/profile-medium-light.png
+profile_image_dark: ../../static/media/profile-medium-dark.png
 ---
 
-# Hi, I'm John Doe
+## Hi, We're Team CORS
 
-This website is a live example of a Gatsby Starter — it's not a real blog.
-People using this starter may want to add some information to this page about them or their business.
-
-
+GDSC SWU 1기 출신의 백엔드 개발자 4명이 모여 시작된 우리 팀은 기술 스터디와 프로젝트를 통해 함께 성장하고 있습니다.
+우리는 회고와 개선을 중시하며 고민이 담긴 코드를 지향합니다.
+그 과정과 결과를 블로그에 담아 우리 팀의 지식과 경험을 나누고자 합니다.
