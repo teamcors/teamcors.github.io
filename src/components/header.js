@@ -93,7 +93,7 @@ const StyledHeader = styled.header`
   transition: all 0.2s ease-out;
 
   body.light-mode & {
-    background-color: #ffe4e6;
+    background-color: #ffffff;
   }
 
   body.dark-mode & {
