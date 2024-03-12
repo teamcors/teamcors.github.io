@@ -3,7 +3,7 @@ title: Mornings are for coffee and contemplation
 date: 2020-03-01
 tags: [stranger things, tv series]
 social_image: '../../static/media/rocket.jpg'
-description: This is a custom description for SEO and Open Graph purposes. If it's not provided, it defaults to auto-generated excerpts of the page content.
+image: '../../static/media/rocket.jpg'
 ---
 
 Mornings are for coffee and contemplation. If we’re both going crazy, then we’ll go crazy together, right? I need my paddles! Yeah, I want a date with Bo Derek. We all want things. Just wait till we tell Will that Jennifer Hayes was crying at his funeral.You shouldn't like things because people tell you you're supposed to. You’re right. You are a freak…. Who would you rather be friends with: Bowie or Kenny Rogers? You’re going to be home by 8, listening to the Talking Heads and reading Vonnegut or something. That sounds like a nice night.If we’re both going crazy, then we’ll go crazy together, right? Why do we even need weapons anyway? We have her.
