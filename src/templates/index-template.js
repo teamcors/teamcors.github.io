@@ -88,6 +88,13 @@ export const pageQuery = graphql`
           description
           title
           tags
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                placeholder: BLURRED
+              )
+            }
+          }
         }
       }
     }
