@@ -33,12 +33,8 @@ const AboutWrapper = styled.div`
   height: 100%;
   padding-top: var(--size-600);
 
-  h2 {
-    font-family: "SUIT-ExtraBold";
-    background: linear-gradient(135deg, #e335ff 10.38%, #0ff 104.83%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  h1 {
+    font-family: "Montserrat-Bold";
   }
 
   @media screen and (max-width: 1000px) {
@@ -76,12 +72,12 @@ export const pageQuery = graphql`
         title
         profile_image_light {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: PNG, height: 400)
+            gatsbyImageData(placeholder: BLURRED, formats: PNG, height: 800)
           }
         }
         profile_image_dark {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: PNG, height: 400)
+            gatsbyImageData(placeholder: BLURRED, formats: PNG, height: 800)
           }
         }
       }
