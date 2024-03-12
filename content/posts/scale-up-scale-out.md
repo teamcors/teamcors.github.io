@@ -12,7 +12,7 @@ tags:
 <strong>서버</strong>라는 것은 외부로부터 들어오는 <strong>요청을 받아 처리해주고 응답을 주는 프로그램이 돌아가고있는 컴퓨터다.</strong><br>
 즉, 서버 또한 처리 속도와 한계가 CPU, 메모리, 저장장치에 영향을 받아 한계가 있다는 것이다.
 
-![Rocket launch](/media/tomcat_access.jpeg)
+![tomcat_access](/media/tomcat_access.jpeg)
 
 request는 queue를 통해 thread pool에 할당되는데, maxThreads(Thread pool size)를 초과하는 요청은 queue에서 대기한다. 이는 문제 상황이 발생했을 확률이 높다는 뜻으로 운영체제에서 요청을 거부하고 대기하는데, 언제까지고 기다릴 수는 없으므로 일정 시간이 지나면 실패로 간주한다.(타임아웃)<br>
 이와 같은 현상이 지속적으로 발생하면 서버의 지연시간이 기하급수적으로 증가하게 되고 트래픽 장애가 발생하는 것이다.
@@ -22,12 +22,12 @@ request는 queue를 통해 thread pool에 할당되는데, maxThreads(Thread poo
 
 ## Scale-up(수직 확장)
 
-![Rocket launch](/media/scale-up.png)
+![scale-up](/media/scale-up.png)
 
 서버의 CPU, RAM(Memory), HDD/SDD(Storage) 등을 추가하거나 더 높은 사양으로 업그레이드 하는 것이다.<br>
 대용량 트래픽 처리를 위한 scale-up을 고려하는 경우 <strong>기억장치(HDD/SDD)의 처리 속도 업그레이드를 고려해야한다.</strong>
 
-![Rocket launch](/media/cpu-sdd.png)
+![cpu-sdd](/media/cpu-sdd.png)
 
 왜냐? 아무리 CPU의 연산 속도가 뛰어나도 기억장치의 데이터 접근 속도가 느리면 결과적으로 요청의 처리속도가 느리기 때문이다.
 
@@ -36,7 +36,7 @@ scale-up은 기존 서버의 사양만 올리는 것으로 비교적 쉽게 교�
 또한 분산처리가 아니기에 하나의 서버에 많은 양의 트래픽을 처리하게 되는데, 서버에 장애가 발생할 경우 큰 타격을 얻어 서버 복구 전까지 서비스를 중단해야하는 경우가 도래한다.<br>
 
 ## Scale-out(수평 확장)
-![Rocket launch](/media/scale-out.png)
+![scale-out](/media/scale-out.png)
 
 서버를 여러 대 추가하여 물리적으로 확장하는 방법이다.<br>
 클라우드를 이용하면 Auto Scaling이라는 기술(자원 사용량을 모니터링 해서 자동으로 서버 증설을 해주는 기능)이 있는데, 이때 사용되는 기술이 scale-out이다.<br>
@@ -92,11 +92,11 @@ IP를 해싱하기 때문에 사용자가 항상 동일한 서버로 연결되�
 
 처음 로드밸런싱을 설명할 때 <strong>'로드밸런서'</strong>라는 단어를 사용했다. 로드밸런서란 부하(=로드)를 분산(=밸런싱)해주는 장치 또는 기술을 통칭하는데, 가장 L4장비와 L7장비가 가장 활용도가 높다. 각각 Layer4(전송 계층)과 Layer7(응용 계층)에서 부하를 분산한다.<br><br>
 
-![Rocket launch](/media/L4.jpg)
+![L4](/media/L4.jpg)
 
 <strong>L4 로드 밸런서</strong>는 네트워크 계층(IP)나 전송 계층(TCP, UDP)를 기준으로 로드밸런싱 알고리즘을 통해 부하를 분산한다.<br>즉, 요청 서비스의 종류와 상관 없이 최적의 서버로 분배하는 것이다.
 
-![Rocket launch](/media/L7.jpg)
+![L7](/media/L7.jpg)
 
 <strong>L7 로드 밸런서</strong>는 응용 계층(HTTP, FTP, SMTP)에서 로드밸런싱을 하기 때문에, IP나 Port 외에도 URI, Http Header, Cookie 등의 사용자 요청 기준으로 분배가 가능하다.<br>서비스를 기준으로 서버를 분리하여 운영하고 요청을 각각 서버에 분산할 수 있다.<br>L4와 달리 데이터를 분석하여 처리하기 때문에 악의적이거나 비정상적인 트래픽을 필터링 할 수 있는 장점이 있으나, 클라이언트가 로드 밸런서와 인증서를 공유해야하기 때문에 로드 밸런서를 통해 공격자가 사용자 데이터에 접근할 수 있는 보안 상의 위험성도 존재한다.
 
@@ -104,5 +104,6 @@ IP를 해싱하기 때문에 사용자가 항상 동일한 서버로 연결되�
 ## 마치며
 트래픽은 무엇인지 또 대용량 트래픽을 처리하는 scale-up과 scale-out에 대해 알아보면서 로드 밸런싱까지 알아보았다.<br>
 비교하며 알아보면 좋은 내용들이기에 한 눈에 비교할 수 있도록 아래의 사진을 첨부하니 참고하면 좋을 것 같다.
-![Rocket launch](/media/df-scale-up-scale-out.png)
-![Rocket launch](/media/L4-L7.png)
+
+![df-scale-up-scale-out](/media/df-scale-up-scale-out.png)
+![L4-L7](/media/L4-L7.png)
