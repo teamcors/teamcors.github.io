@@ -53,7 +53,7 @@ const PostWrapper = styled.div`
   padding-bottom: var(--size-900);
   margin-left: auto;
   margin-right: auto;
-  max-width: 70ch;
+  max-width: 1000px;
   word-wrap: break-word;
   font-size: 1.1rem;
 `;

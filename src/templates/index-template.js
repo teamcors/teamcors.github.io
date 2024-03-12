@@ -42,16 +42,17 @@ const Intro = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 60ch;
-  align-items: center;
+  align-items: flex-start;
   margin-right: auto;
   margin-left: auto;
-  margin-top: var(--size-800);
-  margin-bottom: var(--size-900);
-  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  text-align: left;
   font-size: var(--size-700);
 
   h1 {
-    font-family: "SUIT-ExtraBold";
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
   }
 
   & p {
