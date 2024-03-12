@@ -3,6 +3,7 @@ title: ELK
 date: 2023-07-26
 tags:
   - weekly topic
+image: '../../static/media/rocket.jpg'
 ---
 
 ## ELK란?

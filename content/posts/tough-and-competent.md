@@ -2,8 +2,7 @@
 title: Tough and Competent
 date: 2021-01-02
 tags: [space, mission, flight control]
-social_image: '../../static/media/rocket.jpg'
-description: This is a custom description for SEO and Open Graph purposes. If it's not provided, it defaults to auto-generated excerpts of the page content.
+image: '../../static/media/rocket.jpg'
 ---
 
 Spaceflight will never tolerate carelessness, incapacity, and neglect. Somewhere, somehow, we screwed up. It could have been in design, build, or test. Whatever it was, we should have caught it. We were too gung ho about the schedule and we locked out all of the problems we saw each day in our work.
