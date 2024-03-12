@@ -2,7 +2,7 @@
 title: scale-up과 scale-out이란?
 date: 2023-07-26
 tags:
-  - Topic of the week
+  - weekly topic
 ---
 ## 트래픽이란?
 서버에 발생하는 Request이다.<br>
