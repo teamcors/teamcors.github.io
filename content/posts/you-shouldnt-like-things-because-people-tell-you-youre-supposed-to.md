@@ -2,6 +2,7 @@
 title: You shouldn't like things because people tell you you're supposed to.
 date: 2021-02-18
 tags: [tv series, stranger things]
+image: '../../static/media/rocket.jpg'
 ---
 
 Why’s he gotta kick the door? You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. You’re pretty cute, you know that? Nobody normal ever accomplished anything meaningful in this world.This is not yours to fix alone. You act like you’re all alone out there in the world, but you’re not. You’re not alone. You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. If we’re both going crazy, then we’ll go crazy together, right?Hey kiddo, would you like a balloon? You shouldn't like things because people tell you you're supposed to. You are such a nerd. No wonder you only hang out with boys. You act like you want me to be your friend and then you treat me like garbage. We never would've upset you if we knew you had superpowers.

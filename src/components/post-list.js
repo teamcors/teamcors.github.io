@@ -2,11 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import Tags from "./tags";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 
 const PostList = ({ posts }) => {
   const PostList = posts.map(({ frontmatter, fields, excerpt, timeToRead }) => {
-    const { title, tags, date, description } = frontmatter;
+    const { title, tags, date } = frontmatter;
     const { slug } = fields;
+    const Postimage = getImage(frontmatter.image);
 
     return (
       <PostListItem
@@ -16,8 +19,8 @@ const PostList = ({ posts }) => {
         date={date}
         slug={slug}
         timeToRead={timeToRead}
-        description={description}
-        excerpt={excerpt}
+        image={Postimage}
+
       />
     );
   });
@@ -32,8 +35,7 @@ const PostListItem = ({
   date,
   timeToRead,
   tags,
-  excerpt,
-  description,
+  image,
   slug,
 }) => {
   return (
@@ -43,11 +45,14 @@ const PostListItem = ({
       <PostListTitle>
         <Link to={slug}>{title}</Link>
       </PostListTitle>
-      <PostListExcerpt
-        dangerouslySetInnerHTML={{
-          __html: description || excerpt,
-        }}
-      />
+      <GatsbyImage image={image} alt={title} 
+        style={{
+          layout :"fullwidth" ,
+          marginTop:"auto",
+          aspectRatio: 16/9,
+          marginRight:"-1.5rem",
+          marginLeft:"-1.5rem",
+          }}/>
       <PostListMeta>
         <span>{date}</span>
 
@@ -126,10 +131,7 @@ const PostListTitle = styled.h2`
   }
 `;
 
-const PostListExcerpt = styled.p`
-  margin-top: auto;
-  font-size: var(--size-400);
-`;
+
 
 const PostListMeta = styled.div`
   margin-top: 2rem;
